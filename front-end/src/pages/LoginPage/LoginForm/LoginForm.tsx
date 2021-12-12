@@ -26,7 +26,7 @@ const cnLoginForm = cn('LoginForm');
 export const LoginForm: React.FC<LoginFormProps> = ({ className }) => {
     const { setToken } = useToken();
 
-    const onSubmit = useCallback(async ({ username, password }: LoginFormValues) => {
+    const  onSubmit = useCallback(async ({ username, password }: LoginFormValues) => {
         try {
             if (username && password) {
                 setToken(await login(username, password));
